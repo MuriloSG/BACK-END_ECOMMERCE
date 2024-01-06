@@ -14,6 +14,12 @@ class Product {
   @Column('int')
   quantity: number;
 
+  @Column()
+  category: string;
+
+  @Column()
+  description: string;
+
   @CreateDateColumn()
   createAt: Date;
 
