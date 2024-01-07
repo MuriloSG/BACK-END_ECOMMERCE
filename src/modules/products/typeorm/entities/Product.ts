@@ -21,7 +21,7 @@ class Product {
   description: string;
 
   @CreateDateColumn()
-  createAt: Date;
+  createdAt: Date;
 
   @UpdateDateColumn()
   updateAt: Date;
