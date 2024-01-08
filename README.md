@@ -1,4 +1,4 @@
-# AGENDAMENTOS BARBEARIA
+# API RESTFUL ECOMMERCE
 
 
 ## Dependências de desenvolvimento:
