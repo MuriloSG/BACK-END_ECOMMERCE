@@ -20,3 +20,15 @@
 4. **pg:** v8.11.3
 5. **reflect-metadata:** v0.1.13
 6. **typeorm:** v0.3.17
+
+## Tabela Produtos
+| Atributo    | Tipo       |
+|-------------|------------|
+| id          | string     |
+| name        | string     |
+| price       | number     |
+| quantity    | number     |
+| category    | string     |
+| description | string     |
+| createdAt   | Date       |
+| updatedAt   | Date       |
