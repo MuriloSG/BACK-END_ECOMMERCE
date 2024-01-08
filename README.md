@@ -32,3 +32,23 @@
 | description | string     |
 | createdAt   | Date       |
 | updatedAt   | Date       |
+
+## Rotas validadas com Celebrate/Joi
+- **GET /products:**
+  - Lista todos os produtos.
+  
+- **GET /products/:id:**
+  - Obtém detalhes de um produto específico.
+  - Validação de parâmetros de caminho usando Joi.
+
+- **POST /products:**
+  - Cria um novo produto.
+  - Validação de dados no corpo da solicitação usando Joi.
+
+- **PUT /products/:id:**
+  - Atualiza informações de um produto existente.
+  - Validação de parâmetros de caminho e dados no corpo da solicitação usando Joi.
+
+- **DELETE /products/:id:**
+  - Exclui um produto existente.
+  - Validação de parâmetros de caminho usando Joi.
