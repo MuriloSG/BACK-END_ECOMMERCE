@@ -24,7 +24,7 @@
 ## Tabela Produtos
 | Atributo    | Tipo       |
 |-------------|------------|
-| id          | string     |
+| id (uuid)   | string     |
 | name        | string     |
 | price       | number     |
 | quantity    | number     |
