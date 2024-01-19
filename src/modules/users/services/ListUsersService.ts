@@ -10,7 +10,7 @@ class ListUsersService{
     const users = await usersRepository.find();
 
     if (users.length === 0) {
-      throw new AppError('There are no products', 404);
+      throw new AppError('There are no users', 404);
     }
 
     return users;
