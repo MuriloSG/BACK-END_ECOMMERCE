@@ -20,11 +20,21 @@ class SendForgotPasswordEmail{
       throw new AppError("User does not exists", 404);
     }
 
-    const token = await usersTokensRepositoy.generate(userExists.id);
+    const {token} = await usersTokensRepositoy.generate(userExists.id);
 
     await EtherealMail.sendMail({
-      to: email,
-      body: `Solicitação de redefinição de senha recebida: ${token?.token}`
+      to: {
+        name: userExists.name,
+        email: userExists.email
+      },
+      subject: "[API ECOMMERCE] Recuperação de senha",
+      templateData: {
+        template: `Olá {{name}}: {{token}}`,
+        variables: {
+          name: userExists.name,
+          token
+        }
+      }
     })
   }
 }
