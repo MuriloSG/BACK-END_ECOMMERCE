@@ -12,7 +12,7 @@ interface ITemplateVariable {
 }
 
 interface IPaserMailTemplate {
-  template: string;
+  file: string;
   variables: ITemplateVariable;
 }
 
