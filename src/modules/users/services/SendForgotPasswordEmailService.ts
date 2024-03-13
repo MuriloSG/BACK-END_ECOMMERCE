@@ -20,7 +20,7 @@ class SendForgotPasswordEmail{
     }
 
     const token = await usersTokensRepositoy.generate(userExists.id);
-    
+
     console.log(token);
   }
 }
