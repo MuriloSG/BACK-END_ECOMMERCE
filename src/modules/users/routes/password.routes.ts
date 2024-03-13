@@ -17,7 +17,7 @@ passwordRoutes.post("/forgot",
   forgotPasswordController.create
 );
 
-passwordRoutes.post("/forgot",
+passwordRoutes.post("/reset",
   celebrate({
     [Segments.BODY]: {
       token: Joi.string().uuid().required(),
