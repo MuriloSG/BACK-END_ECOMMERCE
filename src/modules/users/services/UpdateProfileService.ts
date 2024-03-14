@@ -5,7 +5,7 @@ import AppError from "@shared/errors/AppError";
 import { compare, hash } from "bcryptjs";
 
 interface IRequest {
-  user_Id: string;
+  user_id: string;
   name: string;
   email: string;
   password?: string;
@@ -13,10 +13,10 @@ interface IRequest {
 }
 
 class UpdateProfileService {
-  public async execute({ user_Id, name, email, password, old_password }: IRequest): Promise<User> {
+  public async execute({ user_id, name, email, password, old_password }: IRequest): Promise<User> {
 
     const usersRepository = getCustomRepository(UsersRepository);
-    const user = await usersRepository.findById(user_Id);
+    const user = await usersRepository.findById(user_id);
 
     if (!user) {
       throw new AppError('User not found', 404);
@@ -24,7 +24,7 @@ class UpdateProfileService {
 
     const emailExists = await usersRepository.findByEmail(email);
 
-    if (emailExists && emailExists.id !== user_Id) {
+    if (emailExists && emailExists.id !== user_id) {
       throw new AppError("Email already exists");
     }
 
