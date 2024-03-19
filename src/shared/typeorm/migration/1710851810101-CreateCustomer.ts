@@ -23,11 +23,6 @@ export class CreateCustomer1710851810101 implements MigrationInterface {
             type: 'varchar',
           },
           {
-            name: 'isAdmin',
-            type: 'boolean',
-            default: false,
-          },
-          {
             name: 'createdAt',
             type: 'timestamp',
             default: 'now()'
