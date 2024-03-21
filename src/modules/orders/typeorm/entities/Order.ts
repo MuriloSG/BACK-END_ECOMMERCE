@@ -9,7 +9,7 @@ class Order {
 
   @ManyToOne(() => Customer)
   @JoinColumn({ name: "customer_id" })
-  cutomer: Customer;
+  customer: Customer;
 
   @OneToMany(() => OrdersProducts, order_products => order_products.order, {
     cascade: true
